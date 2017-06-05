@@ -31,11 +31,11 @@ import java.util.Map;
  */
 public class ApiVersions {
 
-    private final Map<String, NodeApiVersions> nodeApiVersions = new HashMap<>();
+    private final Map<String, NodeApiVersions> nodeApiVersions2 = new HashMap<>();
     private byte maxUsableProduceMagic = RecordBatch.CURRENT_MAGIC_VALUE;
 
     public synchronized void update(String nodeId, NodeApiVersions nodeApiVersions) {
-        this.nodeApiVersions.put(nodeId, nodeApiVersions);
+        this.nodeApiVersions2.put(nodeId, nodeApiVersions);
         this.maxUsableProduceMagic = computeMaxUsableProduceMagic();
     }
 
